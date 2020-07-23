@@ -1,11 +1,6 @@
 package com.mainacad;
 
-import java.security.Key;
-
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 
 import static com.codeborne.selenide.Selectors.byCssSelector;
 import static com.codeborne.selenide.Selectors.byId;
@@ -13,15 +8,12 @@ import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-/**
- * Hello world!
- */
 public class Lab {
     public static void main(String[] args) throws InterruptedException {
 
         open("https://demoqa.com/automation-practice-form");
         ///Заполняем поле firstNameField
-        $(byId("firstName")).setValue("TestTestovich");
+        $(byId("firstName")).setValue("Test");
         Thread.sleep(1000);
         //Заполняем поле lastName
         $(byId("lastName")).setValue("TestTestovich");
